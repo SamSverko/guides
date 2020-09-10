@@ -25,6 +25,7 @@
 12. Generate the release notes as a markdown file, run `release notes`.
 13. Copy all the release notes contents from the newly created markdown file in the repository's root directory (it will be named something like `release-notes-v1.7.2-1.8.0md`.
 14. Navigate back the to the `/releases` page of the repository, select your recently published release, select "Edit release", paste in the release notes contents into the "Write" section, and select "Update release".
+15. Delete the release notes file from the directory.
 
 ---
 
