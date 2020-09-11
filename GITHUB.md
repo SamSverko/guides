@@ -1,11 +1,22 @@
 # GitHub
 
-## How to merge a PR that has no conflicts with master branch
+## How to merge a PR that has no conflicts
 
 1. Update `origin/master` reference, run `git fetch --prune`.
 2. Rebase branch, run `git rebase origin/master`.
 3. Push rebase changes to `origin/master`, run `git push --force`.
 4. Merge the PR into `origin/master`.
+
+---
+
+## How to merge a PR that has conflicts
+
+1. Update `origin/master` reference, run `git fetch --prune`.
+2. Rebase branch, run `git rebase origin/master`.
+3. Resolve the conflicts in your IDE.
+4. Once all the conflicts have been fixed, add the modified files, run `git add -u`.
+5. Continue on with the rebase, run `git rebase --continue`.
+6. Once the rebase is complete, run `git push --force`.
 
 ---
 
