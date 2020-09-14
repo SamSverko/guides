@@ -13,10 +13,11 @@
 
 1. Update `origin/master` reference, run `git fetch --prune`.
 2. Rebase branch, run `git rebase origin/master`.
-3. Resolve the conflicts in your IDE.
+3. Resolve the conflicts in your IDE for that commit.
 4. Once all the conflicts have been fixed, add the modified files, run `git add -u`.
 5. Continue on with the rebase, run `git rebase --continue`.
-6. Once the rebase is complete, run `git push --force`.
+6. Repeat steps 3-5 as required.
+7. Once the rebase is complete, run `git push --force`.
 
 ---
 
