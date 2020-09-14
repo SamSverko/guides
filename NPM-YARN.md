@@ -29,8 +29,8 @@ The **Alpha** package was successfully added to your **Beta** project, however t
    - This will compress the **Alpha** project into a `.tgz` file and overwrite the current `.tgz` file in the root.
 2. Inside **Alpha** | Rename the `.tgz` file to something new
    - For example, if the file was `package-v1.0.0.tgz`, you can rename it to `package-v1.0.0-local-1.tgz` (you can then continue the naming convention for future changes, such as `-local-2.tgz`, `-local-3.tgz`, etc.).
-3. Inside **Beta** | Update the `package.json` dependency source of **Alpha** to match the file change
-   - For example, `"alpha": "file:../alpha/package-v1.0.0.tgz"` should become `"alpha": "file:../alpha/package-v1.0.0-local-1.tgz"`.
+3. Inside **Beta** | Remove the `package.json` dependency source of **Alpha**
+   - For example, remove the line `"alpha": "file:../alpha/package-v1.0.0.tgz"`.
 4. Inside **Beta** | Run `yarn add file:../alpha/package-v1.0.0-local-1.tgz`
    - Be sure to replace the path and filename with your own.
    - This will re-add the **Alpha** package using the updated `.tgz` file contents.
