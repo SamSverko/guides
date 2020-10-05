@@ -2,17 +2,17 @@
 
 ## How to merge a PR that has no conflicts
 
-1. Update `origin/master` reference, run `git fetch --prune`.
-2. Rebase branch, run `git rebase origin/master`.
-3. Push rebase changes to `origin/master`, run `git push --force`.
-4. Merge the PR into `origin/master`.
+1. Update `origin/main` reference, run `git fetch --prune`.
+2. Rebase branch, run `git rebase origin/main`.
+3. Push rebase changes to `origin/main`, run `git push --force`.
+4. Merge the PR into `origin/main`.
 
 ---
 
 ## How to merge a PR that has conflicts
 
-1. Update `origin/master` reference, run `git fetch --prune`.
-2. Rebase branch, run `git rebase origin/master`.
+1. Update `origin/main` reference, run `git fetch --prune`.
+2. Rebase branch, run `git rebase origin/main`.
 3. Resolve the conflicts in your IDE for that commit.
 4. Once all the conflicts have been fixed, add the modified files, run `git add -u`.
 5. Continue on with the rebase, run `git rebase --continue`.
@@ -27,14 +27,14 @@
 2. Update the version property of the `package.json` to your version (e.g. `"version": "1.8.0"`).
 3. Push your code to the repo, and begin a PR.
 4. Have your PR reviewed and approved by another developer.
-5. Merge the PR into `origin/master`.
+5. Merge the PR into `origin/main`.
 6. Once all the GitHub checks have passed, navigate to the `/releases` page of the repository and select "Draft a new release".
 7. Set the "Tag version" to `v1.8.0` (or whatever version number you are using, just make sure to start with `v`).
-8. Set the "Target" to `master`.
+8. Set the "Target" to `main`.
 9. Set the "Release title" to the same value as your "Tag version" (in this case, it would be `v1.8.0`).
 10. Select "Publish release".
 11. [Skip if you have `@eqworks/release` already installed globally] Install the [EQ Works Release CLI](https://github.com/EQWorks/release) package globally, run `sudo npm i -g @eqworks/release`.
-12. Inside the repository, checkout back to `origin/master` and update its reference, run `git fetch --prune && git pull`.
+12. Inside the repository, checkout back to `origin/main` and update its reference, run `git fetch --prune && git pull`.
 13. Generate the release notes as a markdown file, run `release notes`.
 14. Copy all the release notes contents from the newly created markdown file in the repository's root directory (it will be named something like `release-notes-v1.7.2-1.8.0md`.
 15. Navigate back the to the `/releases` page of the repository, select your recently published release, select "Edit release", paste in the release notes contents into the "Write" section, and select "Update release".
